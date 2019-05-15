@@ -25,7 +25,5 @@
         <mapping resource="hbm/MapEnt.hbm.xml"/>
         <mapping resource="hbm/MonsterEnt.hbm.xml"/>
         <mapping resource="hbm/NpcEnt.hbm.xml"/>
-        <mapping resource="hbm/Drug.hbm.xml"/>
-        <mapping resource="hbm/Equip.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

@@ -11,5 +11,6 @@
         <property name="name" column="name" type="java.lang.String"/>
         <property name="consumable" column="consumable" type="int"/>
         <property name="stackable" column="stackable" type="int"/>
+        <property name="type" column="type" type="int"/>
     </class>
 </hibernate-mapping>

@@ -1,4 +1,4 @@
-package com.game.item;
+package com.game.backpack;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -6,11 +6,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 @Component
-public class EquipDao {
+public class RepositoryDao {
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -22,13 +21,14 @@ public class EquipDao {
     }
 
     //查询单个
-    public Equip get(int id){
+    public Repository get(String accountId){
         try {
             Session session = getSession();
-            String hql = "select e from Equip e where id = ?";
-            Query query = session.createQuery(hql).setInteger(0, id);
-            Equip Equip = (Equip) query.uniqueResult();
-            return Equip;
+            String hql = "select r from Repository r where accountId = ?";
+            Query query = session.createQuery(hql).setString(0, accountId);
+            Repository repository = (Repository) query.uniqueResult();
+            repository.doDeserialize();
+            return repository;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -36,13 +36,13 @@ public class EquipDao {
     }
 
     //查询列表
-    public List<Equip> getList(){
+    public List<Repository> getList(){
         try {
             Session session = getSession();
-            String hql = "from Equip";
+            String hql = "from Repository";
             Query query = session.createQuery(hql);
-            List<Equip> EquipList = query.list();
-            return EquipList;
+            List<Repository> RepositoryList = query.list();
+            return RepositoryList;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -50,16 +50,17 @@ public class EquipDao {
     }
 
     //增加/更新
-    public void saveOrUpdate(Equip equip){
+    public void saveOrUpdate(Repository repository){
+        repository.doSerialize();
         Session session = getSession();
-        session.saveOrUpdate(equip);
+        session.saveOrUpdate(repository);
     }
 
     //删除
-    public void delete(Equip equip){
+    public void delete(Repository repository){
         try {
             Session session = getSession();
-            session.delete(equip);
+            session.delete(repository);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,4 +1,4 @@
-package com.game.item;
+package com.game.backpack;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class DrugDao {
+public class BackpackDao {
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -21,13 +21,14 @@ public class DrugDao {
     }
 
     //查询单个
-    public Drug get(int id){
+    public Backpack get(String accountId){
         try {
             Session session = getSession();
-            String hql = "select d from Drug d where id = ?";
-            Query query = session.createQuery(hql).setInteger(0, id);
-            Drug Drug = (Drug) query.uniqueResult();
-            return Drug;
+            String hql = "select b from Backpack b where accountId = ?";
+            Query query = session.createQuery(hql).setString(0, accountId);
+            Backpack backpack = (Backpack) query.uniqueResult();
+            backpack.doDeserialize();
+            return backpack;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -35,13 +36,13 @@ public class DrugDao {
     }
 
     //查询列表
-    public List<Drug> getList(){
+    public List<Backpack> getList(){
         try {
             Session session = getSession();
-            String hql = "from Drug";
+            String hql = "from Backpack";
             Query query = session.createQuery(hql);
-            List<Drug> DrugList = query.list();
-            return DrugList;
+            List<Backpack> BackpackList = query.list();
+            return BackpackList;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -49,16 +50,17 @@ public class DrugDao {
     }
 
     //增加/更新
-    public void saveOrUpdate(Drug drug){
+    public void saveOrUpdate(Backpack backpack){
+        backpack.doSerialize();
         Session session = getSession();
-        session.saveOrUpdate(drug);
+        session.saveOrUpdate(backpack);
     }
 
     //删除
-    public void delete(Drug drug){
+    public void delete(Backpack backpack){
         try {
             Session session = getSession();
-            session.delete(drug);
+            session.delete(backpack);
         } catch (Exception e) {
             e.printStackTrace();
         }
