@@ -15,7 +15,7 @@ public class MapEnt {
     private int mapId;
     private String mapName;
     @Lob
-    private byte[] existNpcidsData;
+    private byte[] existNpcIdsData;
     @Lob
     private byte[] existMonsterIdsData;
     @Lob
@@ -43,13 +43,13 @@ public class MapEnt {
     }
 
     public void doSerialize(){
-        this.existNpcidsData = JsonUtil.object2bytes(existNpcIds);
+        this.existNpcIdsData = JsonUtil.object2bytes(existNpcIds);
         this.existMonsterIdsData = JsonUtil.object2bytes(existMonsterIds);
         this.mapNearByIdsData = JsonUtil.object2bytes(mapNearByIds);
     }
 
     public void doDeserialize(){
-        this.existNpcIds = JsonUtil.bytes2Object(existNpcidsData, List.class);
+        this.existNpcIds = JsonUtil.bytes2Object(existNpcIdsData, List.class);
         this.existMonsterIds = JsonUtil.bytes2Object(existMonsterIdsData, List.class);
         this.mapNearByIds = JsonUtil.bytes2Object(mapNearByIdsData, List.class);
     }
@@ -86,12 +86,12 @@ public class MapEnt {
         this.existMonsterIds = existMonsterIds;
     }
 
-    public byte[] getExistNpcidsData() {
-        return existNpcidsData;
+    public byte[] getExistNpcIdsData() {
+        return existNpcIdsData;
     }
 
-    public void setExistNpcidsData(byte[] existNpcidsData) {
-        this.existNpcidsData = existNpcidsData;
+    public void setExistNpcIdsData(byte[] existNpcidsData) {
+        this.existNpcIdsData = existNpcidsData;
     }
 
     public byte[] getExistMonsterIdsData() {

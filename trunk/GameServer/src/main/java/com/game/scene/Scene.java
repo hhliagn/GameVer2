@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Scene {
-//    private int[][] pos;
+//    private int[][];
     private int mapId;
     private String accountId;
     private List<MonsterEnt> monsterList = new ArrayList<>();

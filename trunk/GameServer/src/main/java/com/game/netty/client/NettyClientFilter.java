@@ -18,6 +18,6 @@ public class NettyClientFilter extends ChannelInitializer<SocketChannel> {
         ph.addLast("framer", new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
         ph.addLast("decoder", new StringDecoder());
         ph.addLast("encoder", new StringEncoder());
-        ph.addLast("handler", new NettyClientHandler()); //客户端的逻辑
+        ph.addLast("handler", new NettyClientHandler());
     }
 }

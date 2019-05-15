@@ -5,10 +5,7 @@ import com.game.player.Player;
 import com.game.player.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Component
 public class AccountService {
@@ -44,7 +41,8 @@ public class AccountService {
     }
 
     public List<Player> getPlayers(String accountId){
-        return SpringContext.getBean("playerService", PlayerService.class).getPlayers(accountId);
+        PlayerService playerService = SpringContext.getBean("playerService");
+        return playerService.getPlayers(accountId);
     }
 
     public Account getAccount(String accountId){
@@ -67,20 +65,12 @@ public class AccountService {
     }
 
     public boolean createPlayer(String accountId, int job, int sex) {
-        PlayerService playerService = SpringContext.getBean("playerService", PlayerService.class);
+        PlayerService playerService = SpringContext.getBean("playerService");
         return playerService.createPlayer(accountId, job, sex);
     }
 
     public void logout(String accountId) {
         //
-    }
-
-    public AccountDao getAccountDao() {
-        return accountDao;
-    }
-
-    public void setAccountDao(AccountDao accountDao) {
-        this.accountDao = accountDao;
     }
 
     public Account getLoginAccount() {

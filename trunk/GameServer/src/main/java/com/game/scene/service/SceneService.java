@@ -31,7 +31,8 @@ public class SceneService{
     public void enter(String accountId, int mapId) {
         List<MonsterEnt> monsterEnts = monsterDao.findByMapId(mapId);
         List<NpcEnt> npcEnts = npcDao.findByMapId(mapId);
-        Account account = SpringContext.getBean("accountService", AccountService.class).getAccount(accountId);
+        AccountService accountService = SpringContext.getBean("accountService");
+        Account account = accountService.getAccount(accountId);
         Scene scene = createScene(mapId, accountId, monsterEnts, npcEnts, account);
         addScene(scene);
         logger.info("进入场景");

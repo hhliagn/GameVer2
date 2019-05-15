@@ -1,14 +1,17 @@
 package com.game;
 
+import com.game.account.Account;
+import com.game.account.AccountService;
+import com.game.scene.Scene;
 import com.game.scene.entity.*;
 import com.game.scene.service.MapService;
+import com.game.scene.service.SceneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.Arrays;
 
 @Component
-public class GlobalService {
+public class CommonService {
 
     @Autowired
     private MonsterDao monsterDao;
@@ -23,7 +26,7 @@ public class GlobalService {
         MapEnt mapEnt1 = new MapEnt(2, "村子", Arrays.<Long>asList(), Arrays.asList(21L, 22L), Arrays.asList(3, 4));
         MapEnt mapEnt2 = new MapEnt(3, "森林", Arrays.asList(31L, 32L, 33L, 34L, 35L), Arrays.asList(31L, 32L), Arrays.asList(2));
         MapEnt mapEnt3 = new MapEnt(4, "传说秘境", Arrays.asList(41L, 42L, 43L, 44L, 45L), Arrays.asList(41L), Arrays.asList(2));
-        MapService mapService = SpringContext.getBean("mapService", MapService.class);
+        MapService mapService = SpringContext.getBean("mapService");
         mapService.saveMapEnt(mapEnt0);
         mapService.saveMapEnt(mapEnt1);
         mapService.saveMapEnt(mapEnt2);
@@ -65,5 +68,69 @@ public class GlobalService {
         npcDao.saveOrUpdate(npcEnt3);
         npcDao.saveOrUpdate(npcEnt4);
         npcDao.saveOrUpdate(npcEnt5);
+    }
+
+    public String login(String accountId, String password) {
+        AccountService accountService = SpringContext.getBean("accountService");
+        boolean b = accountService.login(accountId, password);
+        if (b)
+            return "登录成功";
+        else
+            return "登录失败";
+    }
+
+    public String createRole(String accountId, int job, int sex) {
+        AccountService accountService = SpringContext.getBean("accountService");
+        boolean b = accountService.createPlayer(accountId, job, sex);
+        if (b)
+            return "创建玩家成功";
+        else
+            return "创建玩家失败";
+    }
+
+    public String enter() {
+        AccountService accountService = SpringContext.getBean("accountService");
+        Account loginAccount = accountService.getLoginAccount();
+        if (loginAccount == null) {
+            return "用户没登陆";
+        }
+        String accountId = loginAccount.getAccountId();
+        int curMapId = accountService.getCurMap(accountId);
+        SceneService sceneService = SpringContext.getBean("sceneService");
+        sceneService.enter(accountId, curMapId);
+        return "进入场景";
+    }
+
+    public String move(int x, int y) {
+        AccountService accountService = SpringContext.getBean("accountService");
+        Account loginAccount = accountService.getLoginAccount();
+        if (loginAccount == null){
+            return "用户没登陆";
+        }
+        SceneService sceneService = SpringContext.getBean("sceneService");
+        Scene scene = sceneService.getScene(loginAccount.getAccountId());
+        if (scene == null){
+            return "用户还没进入场景, 请先enter";
+        }
+        scene.move(x, y);
+        String msg = scene.getMessage();
+        return "已移动到指定位置" + "\n" + msg;
+    }
+
+    public String changeMap(String mapName) {
+        AccountService accountService = SpringContext.getBean("accountService");
+        Account loginAccount = accountService.getLoginAccount();
+        if (loginAccount == null){
+            return "用户没登陆";
+        }
+
+        String accountId = loginAccount.getAccountId();
+        MapService mapService = SpringContext.getBean("mapService");
+        mapService.changeMap(accountId, mapName);
+
+        int mapId = mapService.name2Id(mapName);
+        SceneService sceneService = SpringContext.getBean("sceneService");
+        sceneService.enter(accountId, mapId);
+        return "切换地图成功";
     }
 }

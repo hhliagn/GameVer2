@@ -29,7 +29,7 @@ public class MyClientWindow extends JFrame {
         setContentPane(contentPane);
 
         txt = new JTextArea();
-        txt.setText("准备...");
+        txt.setText("连接成功");
 
         jsp = new JScrollPane(txt);
         //设置矩形大小.参数依次为(矩形左上角横坐标x,矩形左上角纵坐标y，矩形长度，矩形宽度)
@@ -89,7 +89,7 @@ public class MyClientWindow extends JFrame {
                 try{
                     String sendMsg = txtSend.getText();
                     nettyClient.send(sendMsg);
-                    appendText("我说: " + sendMsg);
+                    appendText("CLIENT:" + sendMsg);
                     txtSend.setText("");
 
                     /*String line = null;

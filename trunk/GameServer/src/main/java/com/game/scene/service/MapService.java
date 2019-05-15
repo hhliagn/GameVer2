@@ -26,20 +26,15 @@ public class MapService{
     private HashMap<String, MapEnt> name2Map = new HashMap<>();
 
     public void initMapData() {
-        List<MapEnt> mapEntList = mapEntDao.loadAll();
+        List<MapEnt> mapEntList = mapEntDao.getList();
         for (MapEnt mapEnt : mapEntList) {
             id2Map.put(mapEnt.getMapId(), mapEnt);
             name2Map.put(mapEnt.getMapName(), mapEnt);
         }
     }
 
-//    public MapEnt getMapEnt(int mapId) {
-//        MapEnt mapEnt = mapEntDao.get(mapId);
-//        return mapEnt;
-//    }
-
     public void saveMapEnt(MapEnt mapEnt) {
-        mapEntDao.save(mapEnt);
+        mapEntDao.saveOrUpdate(mapEnt);
     }
 
     public MapEnt getMapEntById(int id){
@@ -51,7 +46,7 @@ public class MapService{
     }
 
     public boolean isAccountCurMap(String accountId, int mapId) {
-        AccountService accountService = SpringContext.getBean("accountService", AccountService.class);
+        AccountService accountService = SpringContext.getBean("accountService");
         int curMap = accountService.getCurMap(accountId);
         if (curMap != mapId){
             return false;
@@ -67,7 +62,7 @@ public class MapService{
         int mapId = mapEnt.getMapId();
         boolean b = canEnter(accountId, mapId);
         if (b){
-            AccountService accountService = SpringContext.getBean("accountService", AccountService.class);
+            AccountService accountService = SpringContext.getBean("accountService");
             Account account = accountService.getAccount(accountId);
             account.setCurMap(mapId);
             accountService.saveAccount(account);
@@ -83,7 +78,7 @@ public class MapService{
     }
 
     private boolean canEnter(String accountId, int mapId) {
-        AccountService accountService = SpringContext.getBean("accountService", AccountService.class);
+        AccountService accountService = SpringContext.getBean("accountService");
         int curMapId = accountService.getCurMap(accountId);
         MapEnt curMap = getMapEntById(curMapId);
         List<Integer> mapNearByIds = curMap.getMapNearByIds();

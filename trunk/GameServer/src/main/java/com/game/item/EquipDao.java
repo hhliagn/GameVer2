@@ -1,4 +1,4 @@
-package com.game.Item;
+package com.game.item;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -6,10 +6,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 import java.util.List;
 
 @Component
-public class DrugDao {
+public class EquipDao {
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -21,13 +22,13 @@ public class DrugDao {
     }
 
     //查询单个
-    public Drug get(int id){
+    public Equip get(int id){
         try {
             Session session = getSession();
-            String hql = "select d from Drug d where id = ?";
+            String hql = "select e from Equip e where id = ?";
             Query query = session.createQuery(hql).setInteger(0, id);
-            Drug Drug = (Drug) query.uniqueResult();
-            return Drug;
+            Equip Equip = (Equip) query.uniqueResult();
+            return Equip;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -35,13 +36,13 @@ public class DrugDao {
     }
 
     //查询列表
-    public List<Drug> getList(){
+    public List<Equip> getList(){
         try {
             Session session = getSession();
-            String hql = "from Drug";
+            String hql = "from Equip";
             Query query = session.createQuery(hql);
-            List<Drug> DrugList = query.list();
-            return DrugList;
+            List<Equip> EquipList = query.list();
+            return EquipList;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -49,16 +50,16 @@ public class DrugDao {
     }
 
     //增加/更新
-    public void saveOrUpdate(Drug drug){
+    public void saveOrUpdate(Equip equip){
         Session session = getSession();
-        session.saveOrUpdate(drug);
+        session.saveOrUpdate(equip);
     }
 
     //删除
-    public void delete(Drug drug){
+    public void delete(Equip equip){
         try {
             Session session = getSession();
-            session.delete(drug);
+            session.delete(equip);
         } catch (Exception e) {
             e.printStackTrace();
         }

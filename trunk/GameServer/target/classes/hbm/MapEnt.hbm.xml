@@ -9,7 +9,7 @@
         <generator class="assigned"/>
     </id>
     <property name="mapName" column="name" type="java.lang.String"/>
-    <property name="existNpcidsData" column="existNpcidsData" type="byte[]"/>
+    <property name="existNpcIdsData" column="existNpcIdsData" type="byte[]"/>
     <property name="existMonsterIdsData" column="existMonsterIdsData" type="byte[]"/>
     <property name="mapNearByIdsData" column="mapNearByIdsData" type="byte[]"/>
 </class>

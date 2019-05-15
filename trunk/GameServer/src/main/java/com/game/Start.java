@@ -13,8 +13,13 @@ public class Start {
     public static void main(String[] args) {
         autoCreateTable();
         applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        SpringContext.getBean("globalService",GlobalService.class).writeData();
-        SpringContext.getBean("mapService", MapService.class).initMapData();
+
+        CommonService commonService = SpringContext.getBean("commonService");
+        commonService.writeData();
+
+        MapService mapService = SpringContext.getBean("mapService");
+        mapService.initMapData();
+
         //netty server
         new Thread(new Runnable() {
             @Override
