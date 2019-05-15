@@ -41,16 +41,16 @@ public class GlobalService {
         MonsterEnt monsterEnt7 = new MonsterEnt(43L, "守卫", 4, 5, 6, 1);
         MonsterEnt monsterEnt8 = new MonsterEnt(44L, "守卫", 4, 4, 5, 1);
         MonsterEnt monsterEnt9 = new MonsterEnt(45L, "守卫", 4, 6, 5, 1);
-        monsterDao.save(monsterEnt0);
-        monsterDao.save(monsterEnt1);
-        monsterDao.save(monsterEnt2);
-        monsterDao.save(monsterEnt3);
-        monsterDao.save(monsterEnt4);
-        monsterDao.save(monsterEnt5);
-        monsterDao.save(monsterEnt6);
-        monsterDao.save(monsterEnt7);
-        monsterDao.save(monsterEnt8);
-        monsterDao.save(monsterEnt9);
+        monsterDao.saveOrUpdate(monsterEnt0);
+        monsterDao.saveOrUpdate(monsterEnt1);
+        monsterDao.saveOrUpdate(monsterEnt2);
+        monsterDao.saveOrUpdate(monsterEnt3);
+        monsterDao.saveOrUpdate(monsterEnt4);
+        monsterDao.saveOrUpdate(monsterEnt5);
+        monsterDao.saveOrUpdate(monsterEnt6);
+        monsterDao.saveOrUpdate(monsterEnt7);
+        monsterDao.saveOrUpdate(monsterEnt8);
+        monsterDao.saveOrUpdate(monsterEnt9);
 
         //npc数据
         NpcEnt npcEnt0 = new NpcEnt(11L, "新手指导员", 1, 10, 10, 1);
@@ -59,11 +59,11 @@ public class GlobalService {
         NpcEnt npcEnt3 = new NpcEnt(31L, "守林人", 3, 10, 10, 1);
         NpcEnt npcEnt4 = new NpcEnt(32L, "农夫", 3, 20, 20, 1);
         NpcEnt npcEnt5 = new NpcEnt(41L, "神秘人", 4, 10, 10, 1);
-        npcDao.save(npcEnt0);
-        npcDao.save(npcEnt1);
-        npcDao.save(npcEnt2);
-        npcDao.save(npcEnt3);
-        npcDao.save(npcEnt4);
-        npcDao.save(npcEnt5);
+        npcDao.saveOrUpdate(npcEnt0);
+        npcDao.saveOrUpdate(npcEnt1);
+        npcDao.saveOrUpdate(npcEnt2);
+        npcDao.saveOrUpdate(npcEnt3);
+        npcDao.saveOrUpdate(npcEnt4);
+        npcDao.saveOrUpdate(npcEnt5);
     }
 }
