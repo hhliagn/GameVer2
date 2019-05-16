@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ceb05c27-53d6-44dd-b957-e9afc82e03cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Backpack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/RepositoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/RepositoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Drug.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Drug.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/DrugDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/EquipDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Drug.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Equip.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Backpack.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Item.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Repository.hbm.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/GameServer/target/" />
@@ -29,17 +18,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Backpack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -113,10 +92,13 @@
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Repository.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackService.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Backpack.hbm.xml" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Repository.hbm.xml" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Item.hbm.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="52" />
     <option name="y" value="15" />
     <option name="width" value="1400" />
@@ -169,9 +151,15 @@
               <item name="GameServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="backpack" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trunk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GameServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="hbm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -186,6 +174,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/GameServer/src/main/resources/hbm" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -282,16 +271,15 @@
       <updated>1557735173402</updated>
       <workItem from="1557735176430" duration="6472000" />
       <workItem from="1557798324328" duration="1315000" />
-      <workItem from="1557834078393" duration="34076000" />
+      <workItem from="1557834078393" duration="35158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41863000" />
+    <option name="totallyTimeSpent" value="42945000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Persistence" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20710456" />
@@ -331,27 +319,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/scene/entity/NpcDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -669,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -699,8 +659,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Backpack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="212">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/Repository.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/Backpack.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/Item.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>
