@@ -18,6 +18,8 @@ public class Account {
     private transient int x;
     private transient int y;
 
+    private long recentPlayerId;
+
     public Account() {
     }
 
@@ -82,5 +84,13 @@ public class Account {
 
     public void setNickName(String nickName) {
         this.nickName = nickName;
+    }
+
+    public long getRecentPlayerId() {
+        return recentPlayerId;
+    }
+
+    public void setRecentPlayerId(long recentPlayerId) {
+        this.recentPlayerId = recentPlayerId;
     }
 }

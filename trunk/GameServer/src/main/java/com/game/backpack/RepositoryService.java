@@ -28,7 +28,7 @@ public class RepositoryService {
     }
 
     public void printItems(Repository repository){
-        Map<Item, Integer> name2count = repository.getName2count();
+        Map<Item, Integer> name2count = repository.getItemIntegerMap();
         Set<Item> items = name2count.keySet();
         for (Item item : items) {
             System.out.println(item);
@@ -40,7 +40,7 @@ public class RepositoryService {
         if (repository == null){
             return;
         }
-        Map<Item, Integer> name2countRepo = repository.getName2count();
+        Map<Item, Integer> name2countRepo = repository.getItemIntegerMap();
         Integer countRepo = name2countRepo.get(item);
         name2countRepo.put(item, countRepo + 1);
     }
@@ -50,7 +50,7 @@ public class RepositoryService {
         if (repository == null){
             return;
         }
-        Map<Item, Integer> name2countRepo = repository.getName2count();
+        Map<Item, Integer> name2countRepo = repository.getItemIntegerMap();
         Integer countRepo = name2countRepo.get(item);
         if (countRepo != 0){
             name2countRepo.put(item, countRepo - 1);
@@ -67,7 +67,7 @@ public class RepositoryService {
         if (repository == null){
             return;
         }
-        Map<Item, Integer> name2count = repository.getName2count();
+        Map<Item, Integer> name2count = repository.getItemIntegerMap();
         name2count.remove(item);
     }
 

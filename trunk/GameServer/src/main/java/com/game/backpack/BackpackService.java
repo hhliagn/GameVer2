@@ -1,6 +1,10 @@
 package com.game.backpack;
 
+import com.game.SpringContext;
+import com.game.account.Account;
+import com.game.account.AccountService;
 import com.game.item.*;
+import com.game.player.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -28,7 +32,7 @@ public class BackpackService {
     }
 
     public void printItems(Backpack backpack){
-        Map<Item, Integer> name2count = backpack.getName2count();
+        Map<Item, Integer> name2count = backpack.getItemIntegerMap();
         Set<Item> items = name2count.keySet();
         for (Item item : items) {
             System.out.println(item);
@@ -36,6 +40,12 @@ public class BackpackService {
     }
 
     private void userItem(String accountId, Item item){
+        AccountService accountService = SpringContext.getBean("accountService");
+        Player recentPlayer = accountService.getRecentPlayer(accountId);
+        if (recentPlayer == null){
+            return;
+        }
+        item.useItem(recentPlayer);
         reduceItem(accountId, item);
     }
 
@@ -44,7 +54,7 @@ public class BackpackService {
         if (backpack == null){
             return;
         }
-        Map<Item, Integer> name2count = backpack.getName2count();
+        Map<Item, Integer> name2count = backpack.getItemIntegerMap();
         name2count.remove(item);
     }
 
@@ -57,7 +67,7 @@ public class BackpackService {
         if (backpack == null){
             return;
         }
-        Map<Item, Integer> name2countBpack = backpack.getName2count();
+        Map<Item, Integer> name2countBpack = backpack.getItemIntegerMap();
         Integer countBpack = name2countBpack.get(item);
         name2countBpack.put(item, countBpack + 1);
     }
@@ -67,7 +77,7 @@ public class BackpackService {
         if (backpack == null){
             return;
         }
-        Map<Item, Integer> name2countBpack = backpack.getName2count();
+        Map<Item, Integer> name2countBpack = backpack.getItemIntegerMap();
         Integer countBpack = name2countBpack.get(item);
         if (countBpack != 0){
             name2countBpack.put(item, countBpack - 1);

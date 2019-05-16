@@ -1,9 +1,13 @@
 package com.game.item;
 
 
+import com.game.player.Player;
+import com.game.utils.JsonUtil;
 import org.hibernate.annotations.Table;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
+import java.util.Map;
 
 @Entity(name = "item")
 @Table(appliesTo = "item")
@@ -15,6 +19,18 @@ public class Item {
     private int type;
     private int consumable;
     private int stackable;
+
+    private transient Map<String, Integer> conditionMap;
+    @Lob
+    private String conditionMapData;
+
+    public void doSerialize(){
+        this.conditionMapData = JsonUtil.object2json(conditionMap);
+    }
+
+    public void doDeserialize(){
+        this.conditionMap = JsonUtil.json2Object(conditionMapData, Map.class);
+    }
 
     public long getId() {
         return id;
@@ -56,14 +72,23 @@ public class Item {
         this.stackable = stackable;
     }
 
-    @Override
-    public String toString() {
-        return "Item{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", type=" + type +
-                ", consumable=" + consumable +
-                ", stackable=" + stackable +
-                '}';
+    public void useItem(Player player){
+
+    }
+
+    public Map<String, Integer> getConditionMap() {
+        return conditionMap;
+    }
+
+    public void setConditionMap(Map<String, Integer> conditionMap) {
+        this.conditionMap = conditionMap;
+    }
+
+    public String getConditionMapData() {
+        return conditionMapData;
+    }
+
+    public void setConditionMapData(String conditionMapData) {
+        this.conditionMapData = conditionMapData;
     }
 }

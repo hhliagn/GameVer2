@@ -91,4 +91,25 @@ public class AccountService {
         }
         account.setNickName(nickName);
     }
+
+    public void changePlayer(String accountId, long playerId){
+        List<Player> players = getPlayers(accountId);
+        Account account = getAccount(accountId);
+        if (players.size() == 0){
+            return;
+        }
+        for (Player player : players) {
+            if (player.getId() == playerId){
+                account.setRecentPlayerId(playerId);
+                return;
+            }
+        }
+    }
+
+    public Player getRecentPlayer(String accountId) {
+        Account account = getAccount(accountId);
+        long recentPlayerId = account.getRecentPlayerId();
+        PlayerService playerService = SpringContext.getBean("playerService");
+        return playerService.getPlayer(recentPlayerId);
+    }
 }

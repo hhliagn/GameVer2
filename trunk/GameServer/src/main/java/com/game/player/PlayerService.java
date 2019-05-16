@@ -1,5 +1,7 @@
 package com.game.player;
 
+import com.game.account.Account;
+import com.game.account.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +15,9 @@ public class PlayerService {
 
     @Autowired
     private PlayerDao playerDao;
+
+    @Autowired
+    private AccountService accountService;
 
     private Map<String, List<Player>> accountId2Players = new HashMap<String, List<Player>>();
 
@@ -73,6 +78,8 @@ public class PlayerService {
         Player player = new Player(id, accountId, status, name, sex, job, createTime);
         playerDao.saveOrUpdate(player);
         addPlayer(player);
+        Account account = accountService.getAccount(accountId);
+        account.setRecentPlayerId(player.getId());
     }
 
     private void addPlayer(Player player) {
@@ -83,5 +90,9 @@ public class PlayerService {
         }
         players.add(player);
         accountId2Players.put(accountId, players);
+    }
+
+    public Player getPlayer(long recentPlayerId) {
+        return playerDao.get(recentPlayerId);
     }
 }

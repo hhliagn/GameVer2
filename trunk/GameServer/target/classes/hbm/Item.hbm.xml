@@ -4,13 +4,14 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="com.game.item">
-    <class name="com.game.item.Drug">
+    <class name="com.game.item.Item">
         <id name="id" column="id" type="java.lang.Long">
             <generator class="identity"/>
         </id>
         <property name="name" column="name" type="java.lang.String"/>
         <property name="consumable" column="consumable" type="int"/>
-        <property name="stackable" column="stackable" type="int"/>
         <property name="type" column="type" type="int"/>
+        <property name="stackable" column="stackable" type="int"/>
+        <property name="conditionMapData" column="conditionMapData" type="java.lang.String"/>
     </class>
 </hibernate-mapping>

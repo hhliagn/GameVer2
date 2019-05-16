@@ -1,4 +1,4 @@
-package com.game.backpack;
+package com.game.item;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Component
 @Transactional
-public class RepositoryDao {
+public class ItemDao {
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -24,14 +24,14 @@ public class RepositoryDao {
     }
 
     //查询单个
-    public Repository get(String accountId){
+    public Item get(long id){
         try {
             Session session = getSession();
-            String hql = "select r from Repository r where accountId = ?";
-            Query query = session.createQuery(hql).setString(0, accountId);
-            Repository repository = (Repository) query.uniqueResult();
-            repository.doDeserialize();
-            return repository;
+            String hql = "select r from Item r where id = ?";
+            Query query = session.createQuery(hql).setLong(0, id);
+            Item item = (Item) query.uniqueResult();
+            item.doDeserialize();
+            return item;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -39,16 +39,16 @@ public class RepositoryDao {
     }
 
     //查询列表
-    public List<Repository> getList(){
+    public List<Item> getList(){
         try {
             Session session = getSession();
-            String hql = "from Repository";
+            String hql = "from Item";
             Query query = session.createQuery(hql);
-            List<Repository> repositoryList = query.list();
-            for (Repository repository : repositoryList) {
-                repository.doDeserialize();
+            List<Item> itemList = query.list();
+            for (Item item : itemList) {
+                item.doDeserialize();
             }
-            return repositoryList;
+            return itemList;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -56,18 +56,18 @@ public class RepositoryDao {
     }
 
     //增加/更新
-    public void saveOrUpdate(Repository repository){
-        repository.doSerialize();
+    public void saveOrUpdate(Item item){
+        item.doSerialize();
         Session session = getSession();
-        session.saveOrUpdate(repository);
+        session.saveOrUpdate(item);
     }
 
     //删除
-    public void delete(Repository repository){
+    public void delete(Item item){
         try {
-            repository.doSerialize();
+            item.doSerialize();
             Session session = getSession();
-            session.delete(repository);
+            session.delete(item);
         } catch (Exception e) {
             e.printStackTrace();
         }

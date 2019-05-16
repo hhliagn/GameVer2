@@ -1,8 +1,13 @@
 package com.game.player;
 
+import com.game.item.Equip;
+import com.game.utils.JsonUtil;
 import org.hibernate.annotations.Table;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
+import java.util.List;
+import java.util.Map;
 
 @Entity(name = "player")
 @Table(appliesTo = "Player")
@@ -16,6 +21,10 @@ public class Player {
     private int sex;
     private int job;
     private long createTime;
+
+    private transient Map<Integer, Equip> equipMap;
+    @Lob
+    private byte[] equipData;
 
     public Player() {
     }
@@ -33,6 +42,14 @@ public class Player {
     public Player(long id, String accountId) {
         this.id = id;
         this.accountId = accountId;
+    }
+
+    public void doSerialize(){
+        this.equipData = JsonUtil.object2bytes(equipMap);
+    }
+
+    public void doDeserialize(){
+        this.equipMap = JsonUtil.bytes2Object(equipData, Map.class);
     }
 
     public long getId() {
@@ -89,5 +106,13 @@ public class Player {
 
     public void setCreateTime(long createTime) {
         this.createTime = createTime;
+    }
+
+    public Map<Integer, Equip> getEquipMap() {
+        return equipMap;
+    }
+
+    public void setEquipMap(Map<Integer, Equip> equipMap) {
+        this.equipMap = equipMap;
     }
 }

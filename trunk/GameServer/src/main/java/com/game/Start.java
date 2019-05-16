@@ -12,21 +12,21 @@ public class Start {
 
     public static void main(String[] args) {
         autoCreateTable();
-        applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-
-        CommonService commonService = SpringContext.getBean("commonService");
-        commonService.writeData();
-
-        MapService mapService = SpringContext.getBean("mapService");
-        mapService.initMapData();
-
-        //netty server
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                NettyServer nettyServer = new NettyServer();
-            }
-        }).start();
+//        applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+//
+//        CommonService commonService = SpringContext.getBean("commonService");
+//        commonService.writeData();
+//
+//        MapService mapService = SpringContext.getBean("mapService");
+//        mapService.initMapData();
+//
+//        //netty server
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                NettyServer nettyServer = new NettyServer();
+//            }
+//        }).start();
     }
 
     private static void autoCreateTable() {

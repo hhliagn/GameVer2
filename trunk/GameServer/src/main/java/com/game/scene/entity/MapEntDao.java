@@ -52,6 +52,7 @@ public class MapEntDao{
     //删除
     public void delete(MapEnt mapEnt){
         try {
+            mapEnt.doSerialize();
             getSession().delete(mapEnt);
         } catch (Exception e) {
             e.printStackTrace();

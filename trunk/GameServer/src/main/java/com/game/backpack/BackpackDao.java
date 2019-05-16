@@ -6,9 +6,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 @Component
+@Transactional
 public class BackpackDao {
 
     @Autowired
@@ -41,8 +44,11 @@ public class BackpackDao {
             Session session = getSession();
             String hql = "from Backpack";
             Query query = session.createQuery(hql);
-            List<Backpack> BackpackList = query.list();
-            return BackpackList;
+            List<Backpack> backpackList = query.list();
+            for (Backpack backpack : backpackList) {
+                backpack.doDeserialize();
+            }
+            return backpackList;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -59,6 +65,7 @@ public class BackpackDao {
     //删除
     public void delete(Backpack backpack){
         try {
+            backpack.doSerialize();
             Session session = getSession();
             session.delete(backpack);
         } catch (Exception e) {

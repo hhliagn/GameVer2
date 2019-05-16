@@ -4,12 +4,11 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="com.game.backpack">
-    <class name="com.game.backpack.Backpack">
+    <class name="com.game.backpack.Repository">
         <id name="accountId" column="accountId" type="java.lang.String">
             <generator class="assigned"/>
         </id>
         <property name="capacity" column="capacity" type="int"/>
-<!--        <property name="itemsData" column="itemsData" type="byte[]"/>-->
-        <property name="itemsData" column="itemsData" type="java.lang.String"/>
+        <property name="itemsData" column="itemsData" type="byte[]"/>
     </class>
 </hibernate-mapping>

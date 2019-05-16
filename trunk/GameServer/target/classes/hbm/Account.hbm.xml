@@ -11,5 +11,6 @@
         <property name="password" column="password" type="java.lang.String"/>
         <property name="createTime" column="createTime" type="java.lang.Long"/>
         <property name="curMap" column="curMap" type="int"/>
+        <property name="recentPlayerId" column="recentPlayerId" type="int"/>
     </class>
 </hibernate-mapping>

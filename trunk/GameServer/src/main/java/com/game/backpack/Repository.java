@@ -19,27 +19,27 @@ public class Repository {
     @Id
     private String accountId;
     private int capacity;
-    private transient Map<Item, Integer> name2count;
+    private transient Map<Item, Integer> ItemIntegerMap;
     @Lob
     private transient byte[] itemsData;
-    private static final int DEFAULT_SIZE = 150;
+    private static final int DEFAULT_SIZE = 50;
 
     public Repository() {
         this.capacity = DEFAULT_SIZE;
-        this.name2count = new HashMap<>(this.capacity);
+        this.ItemIntegerMap = new HashMap<>(this.capacity);
     }
 
     public Repository(int capacity){
         this.capacity = capacity;
-        this.name2count = new HashMap<>(this.capacity);
+        this.ItemIntegerMap = new HashMap<>(this.capacity);
     }
 
     public void doSerialize(){
-        this.itemsData = JsonUtil.object2bytes(name2count);
+        this.itemsData = JsonUtil.object2bytes(ItemIntegerMap);
     }
 
     public void doDeserialize(){
-        this.name2count = JsonUtil.bytes2Object(itemsData, Map.class);
+        this.ItemIntegerMap = JsonUtil.bytes2Object(itemsData, Map.class);
     }
 
     public String getAccountId() {
@@ -58,12 +58,12 @@ public class Repository {
         this.capacity = capacity;
     }
 
-    public Map<Item, Integer> getName2count() {
-        return name2count;
+    public Map<Item, Integer> getItemIntegerMap() {
+        return ItemIntegerMap;
     }
 
-    public void setName2count(Map<Item, Integer> name2count) {
-        this.name2count = name2count;
+    public void setItemIntegerMap(Map<Item, Integer> ItemIntegerMap) {
+        this.ItemIntegerMap = ItemIntegerMap;
     }
 
     public byte[] getItemsData() {
