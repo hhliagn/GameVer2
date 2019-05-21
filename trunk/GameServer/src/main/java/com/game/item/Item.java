@@ -73,7 +73,13 @@ public class Item {
     }
 
     public void useItem(Player player){
+        if (canUseItem(player) == false){
+            return;
+        }
+    }
 
+    public boolean canUseItem(Player player){
+        return true;
     }
 
     public Map<String, Integer> getConditionMap() {

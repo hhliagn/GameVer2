@@ -26,8 +26,9 @@ public class PlayerDao {
             Session session = getSession();
             String hql = "select p from Player p where id = ?";
             Query query = session.createQuery(hql).setLong(0, id);
-            Player Player = (Player) query.uniqueResult();
-            return Player;
+            Player player = (Player) query.uniqueResult();
+            player.doDeserialize();
+            return player;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -40,8 +41,11 @@ public class PlayerDao {
             Session session = getSession();
             String hql = "from Player";
             Query query = session.createQuery(hql);
-            List<Player> PlayerList = query.list();
-            return PlayerList;
+            List<Player> playerList = query.list();
+            for (Player player : playerList) {
+                player.doDeserialize();
+            }
+            return playerList;
         } catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -49,20 +53,22 @@ public class PlayerDao {
     }
 
     //增加/更新
-    public void saveOrUpdate(Player Player){
+    public void saveOrUpdate(Player player){
         try {
+            player.doSerialize();
             Session session = getSession();
-            session.saveOrUpdate(Player);
+            session.saveOrUpdate(player);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     //删除
-    public void delete(Player Player){
+    public void delete(Player player){
         try {
+            player.doSerialize();
             Session session = getSession();
-            session.delete(Player);
+            session.delete(player);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -89,6 +95,9 @@ public class PlayerDao {
             String hql = "select p from Player p where accountId = ?";
             Query query = session.createQuery(hql).setString(0, accountId);
             List<Player> players = query.list();
+            for (Player player : players) {
+                player.doDeserialize();
+            }
             return players;
         } catch (HibernateException e) {
             e.printStackTrace();

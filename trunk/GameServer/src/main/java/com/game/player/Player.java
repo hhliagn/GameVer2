@@ -21,6 +21,8 @@ public class Player {
     private int sex;
     private int job;
     private long createTime;
+    private int level;
+    private long exp;
 
     private transient Map<Integer, Equip> equipMap;
     @Lob
@@ -114,5 +116,29 @@ public class Player {
 
     public void setEquipMap(Map<Integer, Equip> equipMap) {
         this.equipMap = equipMap;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public long getExp() {
+        return exp;
+    }
+
+    public void setExp(long exp) {
+        this.exp = exp;
+    }
+
+    public byte[] getEquipData() {
+        return equipData;
+    }
+
+    public void setEquipData(byte[] equipData) {
+        this.equipData = equipData;
     }
 }

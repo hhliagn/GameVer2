@@ -17,6 +17,9 @@ public class PlayerService {
     private PlayerDao playerDao;
 
     @Autowired
+    private LevelExpDao levelExpDao;
+
+    @Autowired
     private AccountService accountService;
 
     private Map<String, List<Player>> accountId2Players = new HashMap<String, List<Player>>();
@@ -76,6 +79,7 @@ public class PlayerService {
 
     private void createPlayer(Long id, String accountId, int status, String name, int sex, int job, long createTime){
         Player player = new Player(id, accountId, status, name, sex, job, createTime);
+        player.setLevel(1);
         playerDao.saveOrUpdate(player);
         addPlayer(player);
         Account account = accountService.getAccount(accountId);
@@ -94,5 +98,17 @@ public class PlayerService {
 
     public Player getPlayer(long recentPlayerId) {
         return playerDao.get(recentPlayerId);
+    }
+
+    public void levelUp(Player player, long exp){
+        long playerExp = player.getExp();
+        long totalExp = playerExp + exp;
+        LevelExp levelExp = levelExpDao.getMaxLevel(totalExp);
+        int level = levelExp.getLevel();
+        int playerLevel = player.getLevel();
+        if (playerLevel > level){
+            return;
+        }
+        player.setLevel(level);
     }
 }

@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ceb05c27-53d6-44dd-b957-e9afc82e03cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/ItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/account/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Backpack.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Backpack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/RepositoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/RepositoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/RepositoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/RepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/LevelExp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/LevelExpDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Drug.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Drug.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/scene/entity/MapEntDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/scene/entity/MapEntDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/java/com/game/utils/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/java/com/game/utils/JsonUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Account.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Account.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Backpack.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Backpack.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Item.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Item.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameServer/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameServer/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/GameServer/target/" />
@@ -38,14 +24,148 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Backpack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="method#doDeserialize#0;class#Backpack#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="75" column="41" lean-forward="true" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+              <folding>
+                <element signature="e#579#580#0" expanded="true" />
+                <element signature="e#653#654#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#1614#1615#0" expanded="true" />
+                <element signature="e#1641#1642#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+              <folding>
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="method#takeOn#0;class#Equip#0" />
+                <element signature="method#takeOff#0;class#Equip#0" />
+                <element signature="method#useItem#0;class#Equip#0" />
+                <element signature="method#canUseItem#0;class#Equip#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/ItemDao.java">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getName#0;class#PlayerService#0" />
+                <element signature="method#addPlayer#0;class#PlayerService#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/LevelExp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#335#336#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
+                <element signature="e#396#397#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#453#454#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#526#527#0" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/LevelExpDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#511#512#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="70" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Drug.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#canUseItem#0;class#Drug#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#1097#1098#0" expanded="true" />
+                <element signature="e#1161#1162#0" expanded="true" />
+                <element signature="e#1195#1196#0" expanded="true" />
+                <element signature="e#1270#1271#0" expanded="true" />
+                <element signature="e#2462#2463#0" expanded="true" />
+                <element signature="e#2490#2491#0" expanded="true" />
+                <element signature="e#2529#2530#0" expanded="true" />
+                <element signature="e#2563#2564#0" expanded="true" />
+                <element signature="e#2591#2592#0" expanded="true" />
+                <element signature="e#2617#2618#0" expanded="true" />
+                <element signature="e#2653#2654#0" expanded="true" />
+                <element signature="e#2683#2684#0" expanded="true" />
+                <element signature="e#2719#2720#0" expanded="true" />
+                <element signature="e#2751#2752#0" expanded="true" />
+                <element signature="e#2801#2802#0" expanded="true" />
+                <element signature="e#2843#2844#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,6 +188,7 @@
       <find>Backpack</find>
       <find>Object</find>
       <find>Repository</find>
+      <find>player</find>
     </findStrings>
     <replaceStrings>
       <replace>Drug</replace>
@@ -75,6 +196,7 @@
       <replace>Backpack</replace>
       <replace>Repository</replace>
       <replace>Item</replace>
+      <replace>LevelExp</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -83,14 +205,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/scene/Scene.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/netty/client/NettyClientHandler.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/netty/server/NettyServer.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/netty/client/MyClientWindow.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/netty/client/NettyClient.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/netty/client/NettyClientFilter.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/scene/entity/MonsterDao.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerDao.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/SpringContext.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/CommonService.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/netty/server/NettyServerFilter.java" />
@@ -115,17 +234,12 @@
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/RepositoryService.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/account/Account.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Account.hbm.xml" />
-        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/Player.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/account/AccountService.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerService.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackService.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Drug.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/Start.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Backpack.hbm.xml" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Backpack.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/utils/JsonUtil.java" />
-        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/resources/hbm/Item.hbm.xml" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/RepositoryDao.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackDao.java" />
@@ -134,11 +248,19 @@
         <option value="$PROJECT_DIR$/GameServer/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/ItemDao.java" />
         <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/test.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/Player.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerDao.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Drug.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/LevelExp.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/LevelExpDao.java" />
+        <option value="$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerService.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="52" />
+    <option name="x" value="51" />
     <option name="y" value="15" />
     <option name="width" value="1400" />
     <option name="height" value="785" />
@@ -211,6 +333,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trunk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GameServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -322,25 +453,25 @@
       <updated>1557735173402</updated>
       <workItem from="1557735176430" duration="6472000" />
       <workItem from="1557798324328" duration="1315000" />
-      <workItem from="1557834078393" duration="63166000" />
+      <workItem from="1557834078393" duration="63539000" />
+      <workItem from="1558057668011" duration="3398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70953000" />
+    <option name="totallyTimeSpent" value="74724000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Persistence" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20710456" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20978552" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.20679887" />
@@ -355,6 +486,7 @@
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,20 +502,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/netty/server/NettyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/netty/client/NettyClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="67" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/netty/client/NettyClientFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -419,18 +537,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/Item/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/Item/ItemService.java" />
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/MonsterEnt.hbm.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -447,27 +554,9 @@
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/NpcEnt.hbm.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/Drug.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="56" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/DrugDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="26" column="61" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/EquipDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="27" column="62" lean-forward="true" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/Drug.hbm.xml" />
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/DrugDao.java" />
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/EquipDao.java" />
     <entry file="jar://D:/jdk/src.zip!/java/util/AbstractMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -475,13 +564,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/Equip.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/Equip.hbm.xml" />
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/Repository.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -515,34 +598,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#2733#2734#0" expanded="true" />
-            <element signature="e#2785#2786#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/BackpackService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding>
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1195#1196#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -588,17 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar!/com/fasterxml/jackson/databind/JsonSerializer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -632,27 +680,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Backpack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="method#doDeserialize#0;class#Backpack#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/resources/hbm/Item.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Drug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -681,13 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -736,22 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
-            <element signature="e#1790#1791#0" expanded="true" />
-            <element signature="e#1854#1855#0" expanded="true" />
-            <element signature="e#1910#1911#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/ItemDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -759,6 +767,135 @@
           <folding>
             <element signature="e#533#534#0" expanded="true" />
             <element signature="e#590#591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/backpack/Backpack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="method#doDeserialize#0;class#Backpack#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="75" column="41" lean-forward="true" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+          <folding>
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Drug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#canUseItem#0;class#Drug#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/item/Equip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="method#takeOn#0;class#Equip#0" />
+            <element signature="method#takeOff#0;class#Equip#0" />
+            <element signature="method#useItem#0;class#Equip#0" />
+            <element signature="method#canUseItem#0;class#Equip#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/LevelExp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="70" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/LevelExpDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+            <element signature="e#2490#2491#0" expanded="true" />
+            <element signature="e#2529#2530#0" expanded="true" />
+            <element signature="e#2563#2564#0" expanded="true" />
+            <element signature="e#2591#2592#0" expanded="true" />
+            <element signature="e#2617#2618#0" expanded="true" />
+            <element signature="e#2653#2654#0" expanded="true" />
+            <element signature="e#2683#2684#0" expanded="true" />
+            <element signature="e#2719#2720#0" expanded="true" />
+            <element signature="e#2751#2752#0" expanded="true" />
+            <element signature="e#2801#2802#0" expanded="true" />
+            <element signature="e#2843#2844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameServer/src/main/java/com/game/player/PlayerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getName#0;class#PlayerService#0" />
+            <element signature="method#addPlayer#0;class#PlayerService#0" />
           </folding>
         </state>
       </provider>
